@@ -198,8 +198,11 @@
         .link-btn.phone:hover { --accent-glow: rgba(34, 197, 94, 0.25); }
         .link-btn.resume:hover { --accent-glow: rgba(59, 130, 246, 0.25); }
         .link-btn.calendly:hover { --accent-glow: rgba(0, 107, 255, 0.25); }
+        .link-btn.twitter:hover { --accent-glow: rgba(29, 161, 242, 0.25); }
+        .link-btn.substack:hover { --accent-glow: rgba(255, 103, 27, 0.25); }
 
-        .link-btn i {
+        .link-btn i,
+        .link-btn svg {
             width: 20px;
             height: 20px;
             stroke-width: 2px;
@@ -207,7 +210,8 @@
             transition: opacity 0.3s ease;
         }
 
-        .link-btn:hover i {
+        .link-btn:hover i,
+        .link-btn:hover svg {
             opacity: 1;
         }
 
@@ -219,14 +223,16 @@
             .links {
                 grid-template-columns: 1fr;
             }
-            .linkedin { order: 1; }
-            .github { order: 2; }
-            .resume { order: 3; }
-            .calendly { order: 4; }
+            .calendly { order: 1; }
+            .resume { order: 2; }
+            .linkedin { order: 3; }
+            .github { order: 4; }
             .email { order: 5; }
             .phone { order: 6; }
-            .discord { order: 7; }
-            .instagram { order: 8; }
+            .twitter { order: 7; }
+            .substack { order: 8; }
+            .instagram { order: 9; }
+            .discord { order: 10; }
 
             h1 { font-size: 1.75rem; }
             p { font-size: 0.95rem; }
@@ -296,35 +302,42 @@
         </div>
         
         <div class="links">
+            <a href="https://drive.google.com/file/d/1-aySDKr-qELNRwXdDJYEp8wrK51INs04/view?usp=drive_link" class="link-btn resume" target="_blank" rel="noopener noreferrer">
+                <i data-feather="file-text"></i> Resume
+            </a>
+            <a href="https://calendly.com/theshantanujoshi" class="link-btn calendly" target="_blank" rel="noopener noreferrer">
+                <i data-feather="calendar"></i> Book a Meeting
+            </a>
             <a href="https://www.linkedin.com/in/theshantanujoshi/" class="link-btn linkedin" target="_blank" rel="noopener noreferrer">
                 <i data-feather="linkedin"></i> LinkedIn
             </a>
             <a href="https://github.com/theshantanujoshi" class="link-btn github" target="_blank" rel="noopener noreferrer">
                 <i data-feather="github"></i> GitHub
             </a>
-            <a href="https://drive.google.com/file/d/1-aySDKr-qELNRwXdDJYEp8wrK51INs04/view?usp=drive_link" class="link-btn resume" target="_blank" rel="noopener noreferrer">
-                <i data-feather="file-text"></i> Resume
-            </a>
-            <a href="https://calendly.com/theshantanujoshi" class="link-btn calendly" target="_blank" rel="noopener noreferrer">
-                <i data-feather="calendar"></i> Book me for a meeting
+            <a href="mailto:shantanu@gobitsnbytes.org" class="link-btn email" target="_blank" rel="noopener noreferrer">
+                <i data-feather="mail"></i> Email
             </a>
             <a href="tel:+919936328758" class="link-btn phone" target="_blank" rel="noopener noreferrer">
-                <i data-feather="phone"></i> Call Me
+                <i data-feather="phone"></i> Phone
+            </a>
+            <a href="https://x.com/okayjoshiji" class="link-btn twitter" target="_blank" rel="noopener noreferrer">
+                <i data-feather="twitter"></i> Twitter
+            </a>
+            <a href="https://okayjoshiji.substack.com/" class="link-btn substack" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="#020617" style="opacity: 0.8; transition: opacity 0.3s ease;">
+                    <path d="M15 3.604H1v1.891h14v-1.89ZM1 7.208V16l7-3.926L15 16V7.208zM15 0H1v1.89h14z"/>
+                </svg> Substack
+            </a>
+            <a href="https://www.instagram.com/ashanthumain/" class="link-btn instagram" target="_blank" rel="noopener noreferrer">
+                <i data-feather="instagram"></i> Instagram
             </a>
             <div class="link-btn discord" id="discord-btn" onclick="copyDiscord()" style="cursor: pointer; color: #020617;">
                 <span id="discord-content" style="display: flex; align-items: center; gap: 0.75rem;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="#020617" style="opacity: 0.9;">
                         <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2758-3.68-.2758-5.4868 0-.1636-.3933-.4058-.8742-.6173-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1971.3728.2914a.077.077 0 01-.0066.1277 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"></path>
-                    </svg>
-                    Discord
+                    </svg> Discord
                 </span>
             </div>
-            <a href="mailto:shantanu@gobitsnbytes.org" class="link-btn email" target="_blank" rel="noopener noreferrer">
-                <i data-feather="mail"></i> Email
-            </a>
-            <a href="https://www.instagram.com/ashanthumain/" class="link-btn instagram" target="_blank" rel="noopener noreferrer">
-                <i data-feather="instagram"></i> Instagram
-            </a>
         </div>
         <div style="margin-top: 0.5rem; font-size: 0.85rem; font-family: 'Inter', sans-serif; font-weight: 500; opacity: 0.8;">
             Background by <a href="https://unsplash.com/@mgfd" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">@mgfd</a>
