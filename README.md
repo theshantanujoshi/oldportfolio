@@ -1,3 +1,5 @@
+*Not deployed anymore.*
+
 # Shantanu Joshi's Portfolio
 
 A minimal, highly interactive social links landing page. Featuring automated multi-color iridescent liquid shader background effects, custom pointer pixel trails, responsive layouts, and brand-matching glows.
